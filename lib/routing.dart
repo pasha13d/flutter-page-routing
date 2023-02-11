@@ -18,5 +18,12 @@ final GoRouter router = GoRouter(
       path: "/profile",
       builder: (BuildContext context, GoRouterState state) => const ProfilePage(),
     ),
+    GoRoute(
+      name: 'tasks',
+      path: "/tasks",
+      builder: (BuildContext context, GoRouterState state) => TasksPage(
+          taskName: state.queryParams['taskName'],
+      ),
+    ),
   ],
 );

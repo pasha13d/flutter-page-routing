@@ -33,6 +33,16 @@ class _HomePageState extends State<HomePage> {
               }),
               child: const Text('Profile'),
             ),
+            ElevatedButton(
+              onPressed: (() {
+                var paramTaskName = 'ToDo';
+                context.goNamed(
+                  'tasks',
+                  queryParams: {'taskName': paramTaskName,}
+                );
+              }),
+              child: const Text('Tasks Page'),
+            ),
           ],
         ),
       ),
